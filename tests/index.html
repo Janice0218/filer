@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Filer Tests</title>
+  <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
+ </head>
+<body>
+  <div id="mocha"></div>
+  <script src="../node_modules/chai/chai.js"></script>
+  <script src="../node_modules/mocha/mocha.js"></script>
+
+  <script>
+    mocha.setup('bdd').timeout(5000).slow(250);
+
+    window.onload = function() {
+      mocha.checkLeaks();
+      mocha.run();
+    };
+  </script>
+
+  <!-- Add any new tests to `tests/index.js` -->
+  <script src="./index.js"></script>
+</body>
+</html>
